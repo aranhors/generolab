@@ -10,6 +10,7 @@ Todas las fotografías e ilustraciones del sitio son **imágenes generadas con I
 | informe-2.webp | 825×1100 | Informe «Barrer la impunidad» / slide 3 | Mano con escoba de cerdas arcoíris barriendo una mancha de tinta con forma de Suramérica, gouache, sin texto |
 | informe-3.webp | 825×1100 | Informe «Lo que el vidrio no calla» | Vidrio quebrado blanco y negro con salpicadura magenta en el centro, sin texto |
 | informe-4.webp | 825×1100 | Informe «Ondas de odio» | Fondo amarillo con ondas concéntricas y rostro difuminado de perfil, sin texto |
+| blog-0.webp | 1100×1100 | Blog «Guía: cómo corregir tu nombre en tu documento» (página del artículo) | Ilustración risografía: mano con documento de identidad en blanco, sello y pluma, verde lima, rosa y negro, sin texto |
 | blog-1.webp | 1100×1100 | Blog «Brigadas de salud rural diversa» / slide 2 | Collage de papel: paisaje andino, promotoras de salud con maletines entre cultivos, avioneta |
 | blog-2.webp | 1100×1100 | Blog «Tutela por discriminación en un hospital» | Retrato en semitono de mujer trans latinoamericana sonriente sobre fondo naranja, tira verde |
 | blog-3.webp | 1100×1100 | Blog «Nueva cohorte» y página Nosotros | Grupo de ocho jóvenes activistas bajo sombrilla, muro de hiedra, foto documental 35 mm |
