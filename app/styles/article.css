@@ -1,0 +1,74 @@
+/* Hallmark · shape: report and blog detail pages, long document under a colour title band · genre: editorial · theme: custom (reference: temblores.org, by request) · job: join · copy: verbatim · idea: "the reports and posts read like printed dossiers: colour band, cover, marked example figures, then a single reading column"
+ * paper: oklch(98% 0.008 40) · accent: oklch(45% 0.25 300) · display: IBM Plex Mono · body: IBM Plex Serif · hero: title band with cover beside the head · nav: shared · footer: shared · imagery: AI-generated covers and article heroes · signature: the example-data findings band in lime
+ * axes: light/mono/chromatic-coral · posture: full-palette (flat colour blocks after the reference) · contrast: pass · fold: pass · v2.0.0 */
+/* Hallmark · pre-emit critique: P4 H4 E4 S4 R4 V3 · weakest: V, detail pages reuse the home bands; kept them so the reports read as part of the same site */
+/* Hallmark · waive 79 · the informes and blog index pages open with a short colour title band · the same band the other inner pages use, kept so the index reads as part of the reference layout */
+/* Hallmark · copy verbatim · the owner asked for full articles of 600 to 900 words and report sections, so the reading column runs past the 80-word screen budget by request */
+
+.grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap-columns); }
+@media (max-width: 60rem) { .grid-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 34rem) { .grid-3 { grid-template-columns: minmax(0, 1fr); } }
+
+.report__title, .post__title { font-family: var(--font-display); font-weight: 400; font-size: var(--text-title); line-height: 1.3; }
+.post--framed { border: 1px solid var(--color-ink); }
+.section--paper2 { background: var(--color-paper-2); }
+
+.crumb { font-family: var(--font-display); font-size: var(--text-sm); margin-bottom: var(--space-lg); }
+.crumb a { text-decoration-thickness: 1px; }
+.crumb a:hover { text-decoration-thickness: 2px; }
+.meta-row { display: flex; flex-wrap: wrap; gap: var(--space-2xs) var(--space-lg); font-family: var(--font-display); font-size: var(--text-sm); color: var(--color-ink-2); margin-bottom: var(--space-lg); }
+.lede { font-size: var(--text-lead); line-height: 1.6; max-width: 56ch; }
+
+/* report header */
+.report-head { background: var(--tone); padding-block: var(--space-2xl); }
+.report-head__inner { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); gap: var(--space-2xl); align-items: center; }
+.report-head h1, .post-head h1 { font-family: var(--font-display); font-weight: 400; font-size: var(--text-display-s); line-height: 1.08; max-width: 18ch; margin-bottom: var(--space-md); }
+.report-head__cover img { width: 100%; height: auto; box-shadow: 0 0 0 6px var(--color-paper); }
+.report-head .meta-row { color: var(--color-ink); }
+.download { margin-top: var(--space-xl); display: grid; gap: var(--space-xs); justify-items: start; }
+.download__note { font-family: var(--font-display); font-size: var(--text-sm); min-height: 1lh; }
+
+/* findings */
+.findings { background: var(--color-lime); padding-block: var(--section-gap-s); }
+.findings__note { max-width: 60ch; margin-bottom: var(--space-xl); border: 1px solid var(--color-ink); padding: var(--space-sm) var(--space-md); }
+.findings__grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--gap-columns); margin: 0; }
+.finding { border-top: 2px solid var(--color-ink); padding-top: var(--space-md); }
+.finding__value { font-family: var(--font-display); font-size: var(--text-3xl); line-height: 1.1; margin-bottom: var(--space-xs); }
+.finding dd { margin: 0; font-size: var(--text-md); line-height: 1.5; }
+@media (max-width: 60rem) { .findings__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* reading column */
+.article-wrap { display: grid; justify-items: start; }
+.article-body { max-width: 68ch; display: grid; gap: var(--space-lg); font-size: var(--text-lead); line-height: 1.75; }
+.article-body section { display: grid; gap: var(--space-md); }
+.article-body h2 { font-family: var(--font-display); font-weight: 400; font-size: var(--text-section); line-height: 1.2; margin-top: var(--space-xl); }
+.article-body section:first-child h2 { margin-top: 0; }
+.article-cta { margin-top: var(--space-2xl); font-size: var(--text-lead); border-top: 1px solid var(--color-rule); padding-top: var(--space-lg); max-width: 68ch; }
+.article-cta a { font-weight: 700; text-decoration-thickness: 2px; }
+
+/* post header */
+.post-head { padding-block: var(--space-2xl); border-bottom: 1px solid var(--color-rule); }
+.post-head__inner { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: var(--space-2xl); align-items: center; }
+.post-head__img img { width: 100%; height: auto; }
+
+/* index list */
+.index-list { display: grid; gap: var(--space-2xl); }
+.index-item { display: grid; grid-template-columns: minmax(0, 220px) minmax(0, 1fr); gap: var(--space-2xl); align-items: start; border-top: 1px solid var(--color-rule); padding-top: var(--space-lg); }
+.index-item__media img { width: 100%; height: auto; }
+.index-item__text { display: grid; gap: var(--space-sm); justify-items: start; }
+.index-item__text h3 { font-family: var(--font-display); font-weight: 400; font-size: var(--text-2xl); line-height: 1.2; }
+.index-item__text .meta-row { margin-bottom: 0; }
+.index-item__text p { max-width: 56ch; }
+
+@media (max-width: 60rem) {
+  .report-head__inner, .post-head__inner { grid-template-columns: minmax(0, 1fr); gap: var(--space-xl); }
+  .report-head__cover { max-width: 200px; order: -1; }
+  .post-head__img { order: -1; }
+}
+@media (max-width: 34rem) {
+  .index-item { grid-template-columns: minmax(0, 1fr); }
+  .index-item__media { max-width: 200px; }
+  .findings__grid { grid-template-columns: minmax(0, 1fr); }
+}
+.head-links { display: flex; flex-wrap: wrap; gap: var(--space-md); margin-top: var(--space-xl); }
+.byline { font-family: var(--font-display); font-size: var(--text-sm); margin-bottom: var(--space-2xs); }

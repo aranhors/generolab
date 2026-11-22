@@ -14,6 +14,7 @@
 /* Hallmark · waive 85 · the footer opens with the newsletter sign-up · an NGO page whose job is join, and the reference footer the owner asked to reproduce leads with that newsletter */
 @import url("./styles/tokens.css");
 @import url("./styles/base.css");
+@import url("./styles/article.css");
 
 /* ---------- chrome ---------- */
 .skip { position: absolute; left: var(--space-md); top: -100px; background: var(--color-ink); color: var(--color-on-ink); padding: var(--space-xs) var(--space-md); z-index: var(--z-modal); font-family: var(--font-display); }
