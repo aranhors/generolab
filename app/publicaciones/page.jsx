@@ -1,4 +1,5 @@
 import { ReportsGrid, BlogGrid } from "@/components/Sections";
+import Link from "next/link";
 import { pageMeta } from "@/lib/seo";
 
 export const metadata = pageMeta({
@@ -14,6 +15,10 @@ export default function Publicaciones() {
         <div className="container">
           <h1>Publicaciones</h1>
           <p>Informes, guías y conversaciones para entender y transformar la violencia por prejuicio.</p>
+          <div className="head-links">
+            <Link href="/informes" className="btn">Todos los informes</Link>
+            <Link href="/blog" className="btn btn--ghost">Todo el blog</Link>
+          </div>
         </div>
       </header>
       <ReportsGrid title="Informes de derechos humanos" />

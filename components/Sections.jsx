@@ -37,12 +37,12 @@ export function ReportsGrid({ headingLevel = 2, title = "Últimos informes de de
         <H id="informes" className="section-head">{title}</H>
         <div className="grid-4">
           {REPORTS.map((r) => (
-            <article key={r.slug} id={r.slug} className="report">
+            <article key={r.slug} className="report">
               <div className="report__cover">
                 <Image src={r.image} alt={r.alt} width={864} height={1152} sizes="(max-width: 540px) 100vw, (max-width: 960px) 50vw, 25vw" />
               </div>
               <h3>{r.title}</h3>
-              <Link href={`/publicaciones#${r.slug}`} className="btn btn--block" aria-label={`Ver informe: ${r.title}`}>Ver informe</Link>
+              <Link href={`/informes/${r.slug}`} className="btn btn--block" aria-label={`Ver informe: ${r.title}`}>Ver informe</Link>
             </article>
           ))}
         </div>
@@ -59,7 +59,7 @@ export function BlogGrid({ headingLevel = 2 }) {
         <H id="blog" className="section-head section-head--center">Blog</H>
         <div className="grid-4">
           {POSTS.map((p) => (
-            <Link key={p.slug} href={`/publicaciones#${p.slug}`} className="post" id={p.slug}>
+            <Link key={p.slug} href={`/blog/${p.slug}`} className="post">
               {p.image ? (
                 <div className="post__img"><Image src={p.image} alt={p.alt} width={1024} height={1024} sizes="(max-width: 540px) 100vw, (max-width: 960px) 50vw, 25vw" /></div>
               ) : null}
