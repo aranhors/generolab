@@ -1,0 +1,12 @@
+node_modules
+.next
+out
+.vercel
+.env*
+.DS_Store
+.hallmark/shots
+# generados desde assets/bundles por scripts/decode-assets.mjs
+/public/images/*.webp
+/public/og.jpg
+/public/icon.png
+/app/apple-icon.png
