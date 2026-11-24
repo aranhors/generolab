@@ -1,29 +1,37 @@
-/* Hallmark · shape: Long scroll of colour blocks after temblores.org · genre: editorial · theme: custom (reference: temblores.org, by request) · job: join · idea: "a rights lab that reads like a protest poster wall: flat colour blocks, mono heads, serif reading text" · vibe: "loud colour blocks, quiet serif, activist print"
- * paper: oklch(98% 0.008 40) · accent: oklch(45% 0.25 300) · display: IBM Plex Mono · body: IBM Plex Serif · hero: split stage, collage panel left, slide text right on a sun wash, up/down slide controls · nav: wordmark left, mono links right with an overline on the current page · footer: black slab, newsletter left, social and policies right · imagery: AI-generated photographs and print-style covers in the reference's compositions · signature: the colour-coded area blocks, each head on its own flat colour band
- * axes: light/mono/chromatic-coral · posture: full-palette (flat colour blocks after the reference) · contrast: pass · fold: pass · v2.0.0 */
+/* Hallmark · shape: Nicolás Fajardo final design (PDF "WareFrame - GéneroLab"), rebuilt over the base clone · genre: playful · theme: custom (client design, by request) · job: join · idea: "a gender-and-data lab that talks like a zine pinned to a grid board: condensed caps on colour bars, duotone photos, scalloped edges between bands" · vibe: "loud bars, duotone faces, scalloped zine bands"
+ * paper: #e2e1dc grid board · ink: #2d2d2d · accents: pink #d166a1, green #9bdb5e, lilac #aa6ed6 (the PDF palette) · display: Bebas Neue (open stand-in for the PDF face DreamPlanner, which is not licensed for web use; saturated but chosen because it is the closest condensed-caps match) · body: Barlow Semi Condensed (stand-in for the PDF Myriad condensed) · hero: grid-board card with a duotone portrait, a two-line pink title on ink bars, triangle arrows and a donate pill · nav: links left, green wordmark centred, social icons right, on ink · footer: ink slab under a scallop, social left, donate pill right, dashed rule, centred legal lines · imagery: AI-generated photographs baked to green or pink duotone after the PDF · signature: section heads on flat colour bars that bleed off the left edge
+ * axes: dark-and-light/grotesk-condensed/chromatic-pink · posture: full-palette (the client paints every band) · contrast: pass (pink text on ink uses the lighter --color-pink-text, pink text on paper the deeper --color-pink-deep) · fold: pass · v2.0.0 */
 :root {
   --space-3xs: 2px; --space-2xs: 4px; --space-xs: 8px; --space-sm: 12px; --space-md: 16px; --space-lg: 24px; --space-xl: 40px; --space-2xl: 64px; --space-3xl: 96px; --space-4xl: 144px;
-  --text-xs: 0.8125rem; --text-sm: 0.875rem; --text-md: 1rem; --text-lg: 1.25rem; --text-xl: 1.5625rem; --text-2xl: 1.953rem; --text-3xl: 2.441rem;
-  --text-display-s: clamp(2.25rem, 4vw + 0.5rem, 3.75rem); --text-display: clamp(2.75rem, 5vw + 1rem, 5.25rem);
-  --text-section: clamp(1.75rem, 2vw + 1rem, 2.5rem); --text-title: clamp(1.125rem, 0.5vw + 0.9rem, 1.375rem); --text-lead: clamp(1.0625rem, 0.3vw + 1rem, 1.1875rem);
+  --text-xs: 0.875rem; --text-sm: 1rem; --text-md: 1.125rem; --text-lg: 1.375rem; --text-xl: 1.625rem; --text-2xl: 2rem; --text-3xl: 2.75rem;
+  --text-display-s: clamp(3rem, 5vw + 1rem, 5rem); --text-display: clamp(3.75rem, 12vw, 11rem); --text-bar: clamp(3rem, 6vw + 0.5rem, 6.25rem);
+  --text-section: clamp(2.25rem, 3vw + 1rem, 3.25rem); --text-title: clamp(1.25rem, 0.5vw + 1rem, 1.5rem); --text-lead: clamp(1.125rem, 0.4vw + 1rem, 1.3125rem);
+  --text-ui: clamp(1.25rem, 0.4vw + 1.05rem, 1.5rem);
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1); --ease-in: cubic-bezier(0.7, 0, 0.84, 0); --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
   --dur-micro: 120ms; --dur-short: 220ms; --dur-long: 420ms;
-  --color-error: oklch(52% 0.19 27); --color-success: oklch(50% 0.12 150);
-  --container: 1280px; --gutter: 48px; --gap-columns: 32px; --section-gap-s: 72px; --section-gap: 96px; --section-gap-l: 128px;
+  --container: 1280px; --gutter: 48px; --gap-columns: 40px; --section-gap-s: 72px; --section-gap: 104px; --section-gap-l: 128px;
   --z-base: 1; --z-raised: 10; --z-dropdown: 100; --z-sticky: 200; --z-sticky-nav: 300; --z-modal: 400; --z-toast: 500; --z-tooltip: 600;
-  /* paper and ink: warm cream page, soft blush for the area blocks */
-  --color-paper: oklch(98% 0.008 40); --color-paper-2: oklch(94% 0.014 35); --color-paper-3: oklch(90% 0.02 35);
-  --color-ink: oklch(16% 0.005 60); --color-ink-2: oklch(32% 0.01 60); --color-muted: oklch(48% 0.01 60);
-  --color-rule: oklch(22% 0.005 60);
-  --color-on-ink: oklch(98% 0.008 40);
-  /* the block palette: every band is a flat surface, ink always sits on it */
-  --color-lime: oklch(93% 0.21 122); --color-yellow: oklch(85% 0.17 85); --color-coral: oklch(70% 0.17 22);
-  --color-pink: oklch(78% 0.17 335); --color-aqua: oklch(90% 0.13 175); --color-lilac: oklch(88% 0.045 315);
-  --color-periwinkle: oklch(84% 0.05 285); --color-sun: oklch(92% 0.15 100);
-  --color-accent: var(--color-coral); --color-accent-ink: var(--color-ink); --color-focus: oklch(45% 0.25 300);
-  --font-display: var(--font-plex-mono), ui-monospace, "SFMono-Regular", Menlo, monospace;
-  --font-body: var(--font-plex-serif), ui-serif, Georgia, serif;
-  --font-outlier: var(--font-body);
-  --radius-card: 0px; --radius-pill: 999px; --rule-hair: 1px; --shadow-card: none;
-  --tracking-display: 0;
+  /* the PDF palette */
+  --color-ink: #2d2d2d; --color-ink-deep: #1f1f1f; --color-ink-2: #3a3a3a;
+  --color-paper: #e2e1dc; --color-paper-2: #d6d5cf; --color-paper-3: #c9c8c2;
+  --color-pink: #d166a1; --color-green: #9bdb5e; --color-lilac: #aa6ed6;
+  --color-pink-text: #dc7fb2; /* pink for small text on ink: 5.1:1 */
+  --color-pink-deep: #a8357a; /* pink for text on paper: 4.6:1 */
+  --color-muted: #555555; --color-placeholder: #5f5f5f;
+  --color-grid: rgb(45 45 45 / 0.07); --color-scrim: rgb(20 20 20 / 0.88);
+  --shadow-header: 0 6px 18px rgb(0 0 0 / 0.25);
+  --color-rule: var(--color-ink);
+  --color-on-ink: var(--color-paper);
+  --color-accent: var(--color-pink); --color-accent-ink: var(--color-ink-deep); --color-focus: var(--color-ink-deep); --color-focus-on-ink: var(--color-green);
+  --color-error: #9c1f3c; --color-success: #2f6b1a;
+  /* old tone names kept as aliases so every page maps onto the three PDF colours */
+  --color-lime: var(--color-green); --color-yellow: var(--color-green); --color-coral: var(--color-pink); --color-aqua: var(--color-lilac); --color-periwinkle: var(--color-lilac); --color-sun: var(--color-green);
+  --font-display: var(--font-bebas), "Bebas Neue", "Oswald", "Arial Narrow", sans-serif;
+  --font-body: var(--font-barlow), "Barlow Semi Condensed", "Arial Narrow", system-ui, sans-serif;
+  --font-outlier: var(--font-display);
+  --radius-card: 28px; --radius-img: 18px; --radius-board: 22px; --radius-pill: 999px;
+  --rule-hair: 2px; --shadow-hard: 6px 6px 0 0; --shadow-hard-s: 4px 4px 0 0;
+  --tracking-display: 0.01em;
+  --wave: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 88 24' preserveAspectRatio='none'%3E%3Cpath d='M0 24V12Q22-2 44 12T88 12V24Z'/%3E%3C/svg%3E");
+  --wave-h: 24px; --wave-w: 88px;
 }

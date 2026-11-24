@@ -1,12 +1,12 @@
-import { IBM_Plex_Mono, IBM_Plex_Serif } from "next/font/google";
+import { Bebas_Neue, Barlow_Semi_Condensed } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { SITE_URL, SITE_NAME, SITE_DESCRIPTION } from "@/lib/site";
 import { pageMeta } from "@/lib/seo";
 
-const mono = IBM_Plex_Mono({ subsets: ["latin"], weight: ["400", "700"], style: ["normal", "italic"], variable: "--font-plex-mono", display: "swap" });
-const serif = IBM_Plex_Serif({ subsets: ["latin"], weight: ["400", "700"], variable: "--font-plex-serif", display: "swap" });
+const display = Bebas_Neue({ subsets: ["latin"], weight: "400", variable: "--font-bebas", display: "swap" });
+const body = Barlow_Semi_Condensed({ subsets: ["latin"], weight: ["400", "600", "700"], variable: "--font-barlow", display: "swap" });
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
@@ -16,7 +16,7 @@ export const metadata = {
   robots: { index: true, follow: true },
 };
 
-export const viewport = { themeColor: "#fdf6f2" };
+export const viewport = { themeColor: "#2d2d2d" };
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -32,7 +32,7 @@ const jsonLd = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="es" className={`${mono.variable} ${serif.variable}`}>
+    <html lang="es" className={`${display.variable} ${body.variable}`}>
       <body>
         <a href="#contenido" className="skip">Saltar al contenido</a>
         <Header />
