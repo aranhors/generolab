@@ -18,7 +18,7 @@
   --color-pink-text: #dc7fb2; /* pink for small text on ink: 5.1:1 */
   --color-pink-deep: #a8357a; /* pink for text on paper: 4.6:1 */
   --color-muted: #555555; --color-placeholder: #5f5f5f;
-  --color-grid: rgb(45 45 45 / 0.07); --color-scrim: rgb(20 20 20 / 0.88);
+  --color-grid: rgb(45 45 45 / 0.07); --color-scrim: rgb(20 20 20 / 0.88); --color-shadow-hard: #0d0d0d;
   --shadow-header: 0 6px 18px rgb(0 0 0 / 0.25);
   --color-rule: var(--color-ink);
   --color-on-ink: var(--color-paper);
