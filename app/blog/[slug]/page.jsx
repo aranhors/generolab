@@ -56,7 +56,7 @@ export default async function Post({ params }) {
         </div>
       </article>
 
-      <section className="section section--lime" aria-labelledby="relacionados">
+      <section className="section section--green" aria-labelledby="relacionados">
         <div className="container">
           <h2 id="relacionados" className="section-head">Artículos relacionados</h2>
           <PostCards items={otherPosts(slug)} />

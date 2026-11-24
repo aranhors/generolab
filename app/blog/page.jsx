@@ -11,7 +11,7 @@ export const metadata = pageMeta({
 export default function Blog() {
   return (
     <>
-      <header className="page-head tone-lime">
+      <header className="page-head tone-green">
         <div className="container">
           <h1>Blog</h1>
           <p>Guías prácticas, noticias del litigio y crónicas desde los territorios.</p>

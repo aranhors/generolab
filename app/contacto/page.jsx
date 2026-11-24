@@ -1,4 +1,5 @@
 import { pageMeta } from "@/lib/seo";
+import { ContactInfo } from "@/components/Sections";
 
 export const metadata = pageMeta({
   title: "Contacto",
@@ -9,7 +10,7 @@ export const metadata = pageMeta({
 export default function Contacto() {
   return (
     <>
-      <header className="page-head tone-lime">
+      <header className="page-head tone-green">
         <div className="container">
           <h1>Contacto</h1>
           <p>Reporta, pide asesoría o escríbenos. Leemos cada mensaje.</p>
@@ -19,7 +20,7 @@ export default function Contacto() {
         <div className="container split">
           <div id="reporta">
             <h2 className="section-head">Reporta un hecho</h2>
-            <form className="form" action="mailto:hola@generolab.org" method="post" encType="text/plain">
+            <form className="form" action="mailto:info@generolab.org" method="post" encType="text/plain">
               <div className="field">
                 <label htmlFor="rol">Soy</label>
                 <select id="rol" name="rol" className="input">
@@ -37,7 +38,7 @@ export default function Contacto() {
           </div>
           <div id="asesoria">
             <h2 className="section-head">Solicita asesoría</h2>
-            <form className="form" action="mailto:hola@generolab.org" method="post" encType="text/plain">
+            <form className="form" action="mailto:info@generolab.org" method="post" encType="text/plain">
               <div className="field">
                 <label htmlFor="nombre">Nombre</label>
                 <input id="nombre" name="nombre" className="input" autoComplete="name" />
@@ -56,10 +57,16 @@ export default function Contacto() {
           </div>
         </div>
       </section>
-      <section id="dona" className="section section--lime">
-        <div className="container">
-          <h2 className="section-head">Dona</h2>
-          <p>Tu aporte sostiene la clínica legal, el observatorio y las brigadas de salud. Muy pronto habilitaremos aquí las donaciones en línea; mientras tanto, escríbenos y te contamos cómo apoyar.</p>
+      <section className="section section--green wave-up" aria-labelledby="datos-contacto">
+        <div className="container split">
+          <div>
+            <h2 id="datos-contacto" className="section-head">Escríbenos o llámanos</h2>
+            <ContactInfo />
+          </div>
+          <div id="dona">
+            <h2 className="section-head">Dona</h2>
+            <p>Tu aporte sostiene la clínica legal, el observatorio y las brigadas de salud. Muy pronto habilitaremos aquí las donaciones en línea; mientras tanto, escríbenos y te contamos cómo apoyar.</p>
+          </div>
         </div>
       </section>
     </>

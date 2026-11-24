@@ -10,7 +10,7 @@ export const metadata = pageMeta({
 export default function Areas() {
   return (
     <>
-      <header className="page-head tone-aqua">
+      <header className="page-head tone-lilac">
         <div className="container">
           <h1>Áreas de trabajo</h1>
           <p>Seis frentes conectados: cada caso alimenta una investigación.</p>
