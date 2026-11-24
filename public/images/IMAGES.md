@@ -1,6 +1,6 @@
 # Imágenes de GéneroLab
 
-Todas las fotografías e ilustraciones del sitio son **imágenes generadas con IA** como versiones alternas de las composiciones del sitio de referencia (temblores.org). No muestran a personas reales. Se guardan en `assets/bundles/*.txt` (líneas `ruta<TAB>base64`) y `scripts/decode-assets.mjs` las restaura en `public/images/` antes de cada build. Para reemplazar una, sustituye el `.webp` y actualiza su línea en el bundle correspondiente con `base64 -w 0 public/images/<archivo>`.
+Todas las fotografías e ilustraciones del sitio son **imágenes generadas con IA** (primero como versiones alternas del sitio de referencia temblores.org y, desde el 24 nov 2026, siguiendo el diseño final de Nicolás Fajardo). No muestran a personas reales. Se guardan en `assets/bundles/*.txt` (líneas `ruta<TAB>base64`) y `scripts/decode-assets.mjs` las restaura en `public/images/` antes de cada build. Para reemplazar una, sustituye el `.webp` y actualiza su línea en el bundle correspondiente con `base64 -w 0 public/images/<archivo>`.
 
 | Archivo | Tamaño | Uso | Prompt |
 | --- | --- | --- | --- |
@@ -20,4 +20,13 @@ Todas las fotografías e ilustraciones del sitio son **imágenes generadas con I
 | area-participacion.webp | 1100×825 | Área Participación | Panel de siete personas en escenario con luz violeta y pantalla lila, público en silueta |
 | area-salud.webp | 1100×825 | Área Investigación | Equipo de nueve personas en terraza con muro de hiedra, sombrilla y sillas naranjas |
 | area-migracion.webp | 1100×825 | Área Migración | Mujer migrante habla al micrófono en conversatorio con otras tres panelistas, luz rosa |
-| ../og.jpg | 1200×630 | Imagen para redes (Open Graph/Twitter) | Compuesta a partir de hero-collage + logotipo |
+| gl-hero.webp | 720×960 | Carrusel, slide 1 (duotono verde) | Retrato de estudio de archivo, hacia 1905, de una científica latinoamericana con vestido oscuro de cuello alto y cadena de reloj; duotono verde aplicado después |
+| gl-hero-2.webp | 720×960 | Carrusel, slide 2 | blog-1.webp recortada y pasada a duotono verde |
+| gl-hero-3.webp | 720×960 | Carrusel, slide 3 | informe-2.webp recortada y pasada a duotono verde |
+| gl-trabajo.webp | 900×1200 | Inicio, «Nuestro trabajo» (duotono verde) | Foto documental de una investigadora colombiana sonriente con gafas redondas en su escritorio |
+| gl-serv-protocolos.webp | 800×600 | Servicio «Aplicación de protocolos» (duotono rosa) | Facilitadora de pelo rizado sostiene un cuaderno y gesticula frente a una biblioteca |
+| gl-serv-media.webp | 800×600 | Servicio «Le sacamos la media» (duotono rosa) | Render 3D: figuras sobre plataformas escalonadas junto a un gráfico de barras ascendente |
+| gl-serv-cartografias.webp | 800×600 | Servicio «Cartografías corporales» (duotono rosa) | Mapa corporal a tinta sobre papel con un helecho y una hoja prensados |
+| ../og.jpg | 1200×630 | Imagen para redes (Open Graph/Twitter) | Compuesta: tablero cuadriculado, gl-hero.webp y el nombre en Bebas Neue sobre barras |
+
+Las imágenes `gl-*`, `og.jpg`, `icon.png` y `apple-icon.png` viven en `assets/bundles/images-5.txt` e `images-6.txt`; como `decode-assets.mjs` recorre los bundles en orden alfabético, esas versiones reemplazan a las antiguas de los bundles 1 a 3.

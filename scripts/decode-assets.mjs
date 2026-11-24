@@ -7,7 +7,8 @@ import { dirname, join } from "node:path";
 const dir = "assets/bundles";
 let count = 0;
 if (existsSync(dir)) {
-  for (const name of readdirSync(dir)) {
+  // Orden alfabético: un bundle posterior (p. ej. images-5) sobrescribe una ruta repetida de uno anterior.
+  for (const name of readdirSync(dir).sort()) {
     if (!name.endsWith(".txt")) continue;
     for (const line of readFileSync(join(dir, name), "utf8").split("\n")) {
       if (!line.trim()) continue;
