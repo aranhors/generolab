@@ -132,6 +132,25 @@ mark { background: var(--color-green); color: var(--color-ink-deep); padding: 0.
 .hero__lede mark { font-weight: 700; }
 @media (prefers-reduced-motion: reduce) { .hero__slide, .hero__slide[data-phase] { transition: none; transform: none; } }
 
+/* old-film noise from Nicolás's video: fine grain over the board (stronger on the photo), one or two 1px scratches that jump to a new x every frame and flicker, and white dust specks that blink in and out; no global brightness flicker (the video holds steady) */
+.hero__fx { position: absolute; inset: 0; z-index: 2; pointer-events: none; overflow: clip; border-radius: inherit; }
+.hero__fx::before, .hero__fx::after, .hero__fx span { content: ""; position: absolute; inset: 0; pointer-events: none; }
+.hero__fx span:first-child { inset: -110px; background: var(--noise); background-size: 220px 220px; opacity: 0.1; mix-blend-mode: multiply; animation: fx-grain 0.9s steps(1) infinite; }
+.hero__fx span:last-child { background: var(--dust); background-size: 640px 420px; opacity: 0; animation: fx-dust 1.3s steps(1) infinite; }
+.hero__fx::before { background: linear-gradient(to right, var(--color-scratch) 0 1px, transparent 1px), linear-gradient(transparent 0 12%, var(--color-scratch-soft) 12% 40%, transparent 40% 55%, var(--color-scratch-soft) 55% 100%); background-size: 100% 100%, 1px 100%; background-repeat: no-repeat; animation: fx-scratch-a 1.1s steps(1) infinite; }
+.hero__fx::after { background: linear-gradient(to right, var(--color-scratch-soft) 0 1px, transparent 1px); background-repeat: no-repeat; animation: fx-scratch-b 1.7s steps(1) infinite; }
+.hero__media::after { content: ""; position: absolute; inset: 0; background: var(--noise); background-size: 160px 160px; opacity: 0.22; mix-blend-mode: overlay; pointer-events: none; animation: fx-grain 0.7s steps(1) infinite; }
+.hero__donate, .hero__arrow, .hero__status { z-index: 3; }
+.hero__board[data-paused="true"] .hero__fx::before, .hero__board[data-paused="true"] .hero__fx::after, .hero__board[data-paused="true"] .hero__fx span, .hero__board[data-paused="true"] .hero__media::after { animation-play-state: paused; }
+@keyframes fx-grain { 0% { transform: translate(0, 0); } 11% { transform: translate(-37px, 22px); } 22% { transform: translate(51px, -64px); } 33% { transform: translate(-83px, -19px); } 44% { transform: translate(14px, 77px); } 55% { transform: translate(92px, 33px); } 66% { transform: translate(-58px, 88px); } 77% { transform: translate(27px, -91px); } 88% { transform: translate(-101px, 46px); } }
+@keyframes fx-scratch-a { 0% { transform: translateX(23%); opacity: 0.9; } 9% { transform: translateX(61%); opacity: 0.5; } 18% { transform: translateX(41%); opacity: 0; } 27% { transform: translateX(78%); opacity: 0.8; } 36% { transform: translateX(12%); opacity: 0.6; } 45% { transform: translateX(55%); opacity: 0; } 54% { transform: translateX(34%); opacity: 0.9; } 63% { transform: translateX(87%); opacity: 0.4; } 72% { transform: translateX(48%); opacity: 0.7; } 81% { transform: translateX(6%); opacity: 0; } 90% { transform: translateX(69%); opacity: 0.8; } }
+@keyframes fx-scratch-b { 0% { transform: translateX(71%); opacity: 0; } 14% { transform: translateX(29%); opacity: 0.7; } 28% { transform: translateX(83%); opacity: 0.5; } 42% { transform: translateX(16%); opacity: 0; } 57% { transform: translateX(52%); opacity: 0.6; } 71% { transform: translateX(94%); opacity: 0; } 85% { transform: translateX(38%); opacity: 0.8; } }
+@keyframes fx-dust { 0% { opacity: 0.8; background-position: 0 0; } 15% { opacity: 0; } 31% { opacity: 0.7; background-position: -213px 141px; } 46% { opacity: 0; } 62% { opacity: 0.9; background-position: 317px -88px; } 77% { opacity: 0.4; background-position: -129px -203px; } 92% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  .hero__fx span:first-child, .hero__media::after { animation: none; }
+  .hero__fx::before, .hero__fx::after, .hero__fx span:last-child { display: none; }
+}
+
 /* ---------- últimos post ---------- */
 .latest { background: var(--color-ink); color: var(--color-on-ink); padding-block: var(--space-lg) var(--section-gap); }
 .latest__grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(var(--space-lg), 4vw, 56px); padding-inline: clamp(0px, 3vw, var(--space-xl)); }

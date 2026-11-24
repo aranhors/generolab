@@ -75,11 +75,13 @@ export default function HeroCarousel() {
       <h1 className="visually-hidden">GéneroLab, laboratorio de género y datos</h1>
       <div
         className="hero__board"
+        data-paused={paused ? "true" : undefined}
         onMouseEnter={() => setHold(true)}
         onMouseLeave={() => setHold(false)}
         onFocus={() => setHold(true)}
         onBlur={(e) => { if (!e.currentTarget.contains(e.relatedTarget)) setHold(false); }}
       >
+        <div className="hero__fx" aria-hidden="true"><span /><span /></div>
         <Link href="/contacto#dona" className="pill hero__donate">Donan aquí</Link>
         <button type="button" className="hero__arrow hero__arrow--prev" onClick={() => go("prev", true)} aria-label="Destacado anterior"><TriangleLeft /></button>
         <div className="hero__viewport">
