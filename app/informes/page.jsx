@@ -13,7 +13,7 @@ export const metadata = pageMeta({
 export default function Informes() {
   return (
     <>
-      <header className="page-head tone-yellow">
+      <header className="page-head tone-green">
         <div className="container">
           <h1>Informes</h1>
           <p>Investigación con y desde las comunidades para exigir cambios concretos.</p>

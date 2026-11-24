@@ -11,7 +11,7 @@ export const metadata = pageMeta({
 export default function Publicaciones() {
   return (
     <>
-      <header className="page-head tone-yellow">
+      <header className="page-head tone-green">
         <div className="container">
           <h1>Publicaciones</h1>
           <p>Informes, guías y conversaciones para entender y transformar la violencia por prejuicio.</p>

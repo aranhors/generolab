@@ -6,7 +6,7 @@ import { REPORT_DETAILS } from "@/lib/reports";
 import { pageMeta, articleJsonLd } from "@/lib/seo";
 import { ArticleBody, ReportCards, JsonLd, otherReports } from "@/components/ArticleBits";
 
-const TONES = { "manos-arriba": "aqua", "barrer-la-impunidad": "pink", "lo-que-el-vidrio-no-calla": "lilac", "ondas-de-odio": "yellow" };
+const TONES = { "manos-arriba": "lilac", "barrer-la-impunidad": "pink", "lo-que-el-vidrio-no-calla": "lilac", "ondas-de-odio": "green" };
 
 export function generateStaticParams() {
   return REPORTS.map((r) => ({ slug: r.slug }));
