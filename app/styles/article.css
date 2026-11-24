@@ -1,5 +1,5 @@
 /* Hallmark · shape: Nicolás Fajardo final design (PDF "WareFrame - GéneroLab"), rebuilt over the base clone · genre: playful · theme: custom (client design, by request) · job: join · idea: "a gender-and-data lab that talks like a zine pinned to a grid board: condensed caps on colour bars, duotone photos, scalloped edges between bands" · vibe: "loud bars, duotone faces, scalloped zine bands"
- * paper: #e2e1dc grid board · ink: #2d2d2d · accents: pink #d166a1, green #9bdb5e, lilac #aa6ed6 (the PDF palette) · display: Bebas Neue (open stand-in for the PDF face DreamPlanner, which is not licensed for web use; saturated but chosen because it is the closest condensed-caps match) · body: Barlow Semi Condensed (stand-in for the PDF Myriad condensed) · hero: grid-board card with a duotone portrait, a two-line pink title on ink bars, triangle arrows and a donate pill · nav: links left, green wordmark centred, social icons right, on ink · footer: ink slab under a scallop, social left, donate pill right, dashed rule, centred legal lines · imagery: AI-generated photographs baked to green or pink duotone after the PDF · signature: section heads on flat colour bars that bleed off the left edge
+ * paper: #e2e1dc grid board · ink: #2d2d2d · accents: pink #d166a1, green #9bdb5e, lilac #aa6ed6 (the PDF palette) · display: DREAM PLANNER Regular (the PDF face, licensed by the client) · body: Barlow Semi Condensed (stand-in for the PDF Myriad condensed) · hero: grid-board card with a duotone portrait, a two-line pink title on ink bars, triangle arrows and a donate pill · nav: links left, green wordmark centred, social icons right, on ink · footer: ink slab under a scallop, social left, donate pill right, dashed rule, centred legal lines · imagery: AI-generated photographs baked to green or pink duotone after the PDF · signature: section heads on flat colour bars that bleed off the left edge
  * axes: dark-and-light/grotesk-condensed/chromatic-pink · posture: full-palette (the client paints every band) · contrast: pass (pink text on ink uses the lighter --color-pink-text, pink text on paper the deeper --color-pink-deep) · fold: pass · v2.0.0 */
 /* Hallmark · pre-emit critique: P4 H4 E4 S4 R4 V4 · weakest: V, detail pages reuse the home bars and cards so the reports read as part of the same site */
 /* Hallmark · waive 79 · the informes and blog index pages open with a short ink title band · the same band every other inner page uses, so the index reads as part of the client design */
@@ -9,7 +9,7 @@
 @media (max-width: 60rem) { .grid-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 34rem) { .grid-3 { grid-template-columns: minmax(0, 1fr); } }
 
-.crumb { font-family: var(--font-display); font-size: var(--text-ui); line-height: 1; margin-bottom: var(--space-lg); }
+.crumb { font-family: var(--font-display); text-transform: uppercase; font-size: var(--text-ui); line-height: 1; margin-bottom: var(--space-lg); }
 .crumb a { color: var(--color-pink-text); text-decoration: none; display: inline-block; padding-block: var(--space-xs); }
 .crumb a:hover { color: var(--color-green); text-decoration: underline; text-decoration-thickness: 2px; }
 .meta-row { display: flex; flex-wrap: wrap; gap: var(--space-2xs) var(--space-lg); font-size: var(--text-sm); color: var(--color-muted); margin-bottom: var(--space-lg); }
@@ -21,7 +21,7 @@
 .post-head { --tone: var(--color-pink); }
 .report-head__inner { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); gap: var(--space-2xl); align-items: center; }
 .post-head__inner { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: var(--space-2xl); align-items: center; }
-.report-head h1, .post-head h1 { display: inline; font-family: var(--font-display); font-weight: 400; font-size: var(--text-display-s); line-height: 1.12; color: var(--color-ink-deep); background: var(--tone); padding: 0.1em 0.25em 0; box-decoration-break: clone; -webkit-box-decoration-break: clone; letter-spacing: var(--tracking-display); }
+.report-head h1, .post-head h1 { display: inline; font-family: var(--font-display); text-transform: uppercase; font-weight: 400; font-size: var(--text-display-s); line-height: 1.12; color: var(--color-ink-deep); background: var(--tone); padding: 0.1em 0.25em 0; box-decoration-break: clone; -webkit-box-decoration-break: clone; letter-spacing: var(--tracking-display); }
 .report-head .meta-row, .post-head .meta-row { color: var(--color-paper-3); margin-top: var(--space-lg); }
 .report-head__cover img, .post-head__img img { width: 100%; height: auto; border-radius: var(--radius-card); border: var(--rule-hair) solid var(--color-paper); box-shadow: 10px 10px 0 0 var(--tone); }
 .download { margin-top: var(--space-xl); display: grid; gap: var(--space-sm); justify-items: start; }
@@ -33,7 +33,7 @@
 .findings__note { max-width: 60ch; margin-bottom: var(--space-xl); border: var(--rule-hair) dashed var(--color-ink); border-radius: var(--radius-img); padding: var(--space-sm) var(--space-md); }
 .findings__grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--gap-columns); margin: 0; }
 .finding { background: var(--color-paper); border: var(--rule-hair) solid var(--color-ink); border-radius: var(--radius-card); box-shadow: var(--shadow-hard) var(--color-ink); padding: var(--space-md) var(--space-lg) var(--space-lg); }
-.finding__value { font-family: var(--font-display); font-size: var(--text-3xl); line-height: 1; margin-bottom: var(--space-xs); color: var(--color-pink-deep); }
+.finding__value { font-family: var(--font-display); text-transform: uppercase; font-size: var(--text-3xl); line-height: 1; margin-bottom: var(--space-xs); color: var(--color-pink-deep); }
 .finding dd { margin: 0; font-size: var(--text-sm); line-height: 1.45; }
 @media (max-width: 60rem) { .findings__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 
@@ -41,7 +41,7 @@
 .article-wrap { display: grid; justify-items: start; }
 .article-body { max-width: 68ch; display: grid; gap: var(--space-lg); font-size: var(--text-lead); line-height: 1.7; color: var(--color-ink-deep); }
 .article-body section { display: grid; gap: var(--space-md); }
-.article-body h2 { font-family: var(--font-display); font-weight: 400; font-size: var(--text-section); line-height: 1; margin-top: var(--space-xl); }
+.article-body h2 { font-family: var(--font-display); text-transform: uppercase; font-weight: 400; font-size: var(--text-section); line-height: 1; margin-top: var(--space-xl); }
 .article-body section:first-child h2 { margin-top: 0; }
 .article-cta { margin-top: var(--space-2xl); font-size: var(--text-lead); border-top: 2px dashed var(--color-ink); padding-top: var(--space-lg); max-width: 68ch; }
 .article-cta a { font-weight: 700; color: var(--color-pink-deep); text-decoration-thickness: 2px; }
@@ -53,7 +53,7 @@
 .index-item:first-child { border-top: 0; padding-top: 0; }
 .index-item__media img { width: 100%; height: auto; border-radius: var(--radius-img); border: var(--rule-hair) solid var(--color-ink); box-shadow: var(--shadow-hard) var(--color-ink); }
 .index-item__text { display: grid; gap: var(--space-sm); justify-items: start; }
-.index-item__text h3 { font-family: var(--font-display); font-weight: 400; font-size: var(--text-2xl); line-height: 1; }
+.index-item__text h3 { font-family: var(--font-display); text-transform: uppercase; font-weight: 400; font-size: var(--text-2xl); line-height: 1; }
 .index-item__text .meta-row { margin-bottom: 0; }
 .index-item__text p { max-width: 56ch; }
 

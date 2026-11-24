@@ -10,3 +10,4 @@ out
 /public/og.jpg
 /public/icon.png
 /app/apple-icon.png
+/public/fonts/*.woff*
