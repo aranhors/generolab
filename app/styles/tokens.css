@@ -1,6 +1,8 @@
 /* Hallmark · shape: Nicolás Fajardo final design (PDF "WareFrame - GéneroLab"), rebuilt over the base clone · genre: playful · theme: custom (client design, by request) · job: join · idea: "a gender-and-data lab that talks like a zine pinned to a grid board: condensed caps on colour bars, duotone photos, scalloped edges between bands" · vibe: "loud bars, duotone faces, scalloped zine bands"
- * paper: #e2e1dc grid board · ink: #2d2d2d · accents: pink #d166a1, green #9bdb5e, lilac #aa6ed6 (the PDF palette) · display: Bebas Neue (open stand-in for the PDF face DreamPlanner, which is not licensed for web use; saturated but chosen because it is the closest condensed-caps match) · body: Barlow Semi Condensed (stand-in for the PDF Myriad condensed) · hero: grid-board card with a duotone portrait, a two-line pink title on ink bars, triangle arrows and a donate pill · nav: links left, green wordmark centred, social icons right, on ink · footer: ink slab under a scallop, social left, donate pill right, dashed rule, centred legal lines · imagery: AI-generated photographs baked to green or pink duotone after the PDF · signature: section heads on flat colour bars that bleed off the left edge
+ * paper: #e2e1dc grid board · ink: #2d2d2d · accents: pink #d166a1, green #9bdb5e, lilac #aa6ed6 (the PDF palette) · display: DREAM PLANNER Regular (the PDF face, licensed by the client) · body: Barlow Semi Condensed (stand-in for the PDF Myriad condensed) · hero: grid-board card with a duotone portrait, a two-line pink title on ink bars, triangle arrows and a donate pill · nav: links left, green wordmark centred, social icons right, on ink · footer: ink slab under a scallop, social left, donate pill right, dashed rule, centred legal lines · imagery: AI-generated photographs baked to green or pink duotone after the PDF · signature: section heads on flat colour bars that bleed off the left edge
  * axes: dark-and-light/grotesk-condensed/chromatic-pink · posture: full-palette (the client paints every band) · contrast: pass (pink text on ink uses the lighter --color-pink-text, pink text on paper the deeper --color-pink-deep) · fold: pass · v2.0.0 */
+/* DREAM PLANNER Regular (Sensatype), the PDF's display face, licensed and supplied by the client; self-hosted from public/fonts */
+@font-face { font-family: "Dream Planner"; src: url("/fonts/DreamPlanner-Regular.woff2") format("woff2"), url("/fonts/DreamPlanner-Regular.woff") format("woff"); font-weight: 400; font-style: normal; font-display: swap; }
 :root {
   --space-3xs: 2px; --space-2xs: 4px; --space-xs: 8px; --space-sm: 12px; --space-md: 16px; --space-lg: 24px; --space-xl: 40px; --space-2xl: 64px; --space-3xl: 96px; --space-4xl: 144px;
   --text-xs: 0.875rem; --text-sm: 1rem; --text-md: 1.125rem; --text-lg: 1.375rem; --text-xl: 1.625rem; --text-2xl: 2rem; --text-3xl: 2.75rem;
@@ -26,7 +28,7 @@
   --color-error: #9c1f3c; --color-success: #2f6b1a;
   /* old tone names kept as aliases so every page maps onto the three PDF colours */
   --color-lime: var(--color-green); --color-yellow: var(--color-green); --color-coral: var(--color-pink); --color-aqua: var(--color-lilac); --color-periwinkle: var(--color-lilac); --color-sun: var(--color-green);
-  --font-display: var(--font-bebas), "Bebas Neue", "Oswald", "Arial Narrow", sans-serif;
+  --font-display: "Dream Planner", "Arial Narrow", sans-serif;
   --font-body: var(--font-barlow), "Barlow Semi Condensed", "Arial Narrow", system-ui, sans-serif;
   --font-outlier: var(--font-display);
   --radius-card: 28px; --radius-img: 18px; --radius-board: 22px; --radius-pill: 999px;
